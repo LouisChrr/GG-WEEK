@@ -18,6 +18,7 @@ public class TongueStrokeDestroy : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
+        animationTongue.Play();
         this.gameObject.SetActive(false);
     }
 

@@ -19,7 +19,8 @@ public class TongueStroke : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        
+        animationTongue.Play();
+        animationInteract.Play();
     }
 
     public void OnEndHover()
