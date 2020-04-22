@@ -17,10 +17,14 @@ public class FPSController : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
-
-    [HideInInspector]
+    public LayerMask wallMask = -1;
+    public float frontRayDistance, backRayDistance;
     public bool canMove = true;
-
+    public bool frontHit, backHit;
+    float xRotation;
+    float lerpValue;
+    public bool rotating;
+    public bool isOnWall;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -71,4 +75,50 @@ public class FPSController : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
+
+    public void JumpOnWall()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, frontRayDistance, wallMask))
+        {
+            Debug.DrawRay(transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
+            frontHit = true;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, Camera.main.transform.TransformDirection(Vector3.forward) * frontRayDistance, Color.blue);
+            frontHit = false;
+        }
+
+
+        if (!isOnWall && frontHit && !characterController.isGrounded || rotating)
+        {
+            gravity = 0.0f;
+            // TOURNER EN X A -90
+            // Quaternion targetRot = transform.rotation;
+            // xRotation = targetRot.eulerAngles.x;
+            // xRotation -= 90;
+            // Quaternion newRot = Quaternion.Lerp(transform.rotation, targetRot, lerpValue);
+            lerpValue += Time.deltaTime * 2.0f;
+            xRotation = Mathf.Lerp(0, -90, lerpValue);
+            this.transform.eulerAngles = new Vector3(xRotation, 0, 0);
+            if (xRotation > -89.5f)
+            {
+                rotating = true;
+            }
+            else
+            {
+                xRotation = -90f;
+                isOnWall = true;
+                lerpValue = 0;
+                this.transform.eulerAngles = new Vector3(xRotation, 0, 0);
+                rotating = false;
+            }
+        }
+
+
+    }
+
+
 }
