@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static GameManager Instance { get; protected set; }
-
+    public GameObject Player, playerCam;
     public GameObject interactIcon;
     public bool canPlayerMove = true;
     
@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    public void ShakeCam(float duration)
+    {
+        playerCam.GetComponent<MotionCamera>().ShakeDuration = duration;
+    }
 
 
     void Start()

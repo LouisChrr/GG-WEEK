@@ -134,9 +134,10 @@ public class PlayerMovement : MonoBehaviour
             if (!rotating)
             {
                 // ON COMMENCE LA PHASE DE ROTATE
-                //targetRot = Quaternion.LookRotation(Camera.main.transform.up, -Camera.main.transform.forward);
+
                 targetRot = Quaternion.LookRotation(Camera.main.transform.TransformDirection(transform.up), -Camera.main.transform.TransformDirection(transform.forward));
                 oldRot = Camera.main.transform.rotation;
+
                 rotating = true;
                 lerpValue = 0;
             }
@@ -262,10 +263,6 @@ public class PlayerMovement : MonoBehaviour
         IsLanded = true;
     }
 
-   
-
-
-   
     void UpdateCameraRotation()
     {
         //print(Input.GetAxis("Mouse X"));

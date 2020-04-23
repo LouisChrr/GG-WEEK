@@ -32,6 +32,14 @@ public class MotionCamera : MonoBehaviour
         Offset.y = PlayerRb.velocity.y * 0.05f;
         if (transform.position != InitialPos.position + Offset)
             transform.position = Vector3.Lerp(transform.position, InitialPos.position + Offset, Time.deltaTime / 2.0f);
+
+        if (ShakeDuration >= 0)
+        {
+            DesiredPosition = InitialPos.position + transform.right * XOffset + transform.up * YOffset;
+            if (transform.position != DesiredPosition)
+                transform.position = Vector3.Lerp(transform.position, DesiredPosition, Time.deltaTime);
+            ShakeCam(magnitude);
+        }
     }
 
 

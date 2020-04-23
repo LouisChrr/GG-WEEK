@@ -1497,7 +1497,7 @@ MonoBehaviour:
   PlayerObj: {fileID: 2022112369}
   InitialPos: {fileID: 1813003737}
   ShakeDuration: 0
-  magnitude: 0
+  magnitude: 40
   XOffset: 0
   YOffset: 0
   Timed: 0
@@ -2477,6 +2477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece2e8e7e47f07f4d9a0b55c1cd98116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 2022112369}
+  playerCam: {fileID: 963194225}
   interactIcon: {fileID: 611802388}
   canPlayerMove: 1
 --- !u!4 &1313369429
