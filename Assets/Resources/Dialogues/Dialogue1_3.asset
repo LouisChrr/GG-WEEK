@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
+  m_Name: Dialogue1_3
+  m_EditorClassIdentifier: 
+  dialogue: "MEi : Tr\xE8s bien\u2026 je vais essayer de le trouver.\r"
+  nextDialogue: {fileID: 11400000, guid: c5c250c6e0e18c14a89c4e7965b1aff0, type: 2}
+  choixApres: 0
+  choix1: 
+  choix2: 
+  nextDialogueChoice1: {fileID: 0}
+  nextDialogueChoice2: {fileID: 0}
+  codeApres: 1
+  code: 956
+  exitPc: 0

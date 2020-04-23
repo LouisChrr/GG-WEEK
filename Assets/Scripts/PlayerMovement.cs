@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
     public float lerpValue;
     public bool rotating, rotatingback;
     public bool isOnWall;
+    private GameManager GameManager;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -81,19 +82,35 @@ public class PlayerMovement : MonoBehaviour
         PlayerPhysic = GetComponent<Rigidbody>();
         playerCapsuleCollider = GetComponent<CapsuleCollider>();
         baseSpeed = Speed;
+        GameManager = GameManager.Instance;
     }
 
     void Update()
     {
-        UpdateColliderSize();
-        //if (!rotating && !rotatingback)
-       // {
+        if (GameManager.canPlayerMove)
+        {
+            UpdateColliderSize();
+
             UpdateCameraRotation();
 
-      //  }
 
-        CameraObject.GetComponent<Camera>().fieldOfView = FOV;
-        JumpOnWall();
+            CameraObject.GetComponent<Camera>().fieldOfView = FOV;
+            JumpOnWall();
+        }
+    }
+    void FixedUpdate()
+    {
+        if (GameManager.canPlayerMove)
+        {
+            UpdateRunning();
+            CheckForGround();
+            CheckForRoof();
+            if (!rotating)
+            {
+                UpdatePlayerMovement();
+                UpdateStance();
+            }
+        }
     }
 
     public void JumpOnWall()
@@ -245,20 +262,7 @@ public class PlayerMovement : MonoBehaviour
         IsLanded = true;
     }
 
-    void FixedUpdate()
-    {
-
-        UpdateRunning();
-        CheckForGround();
-        CheckForRoof();
-        if (!rotating)
-        {
-            UpdatePlayerMovement();
-            UpdateStance();
-        }
-        
-
-    }
+   
 
 
    
@@ -281,25 +285,40 @@ public class PlayerMovement : MonoBehaviour
             // ForwardLookingDirection = new Vector3(Mathf.Sin(this.transform.eulerAngles.y * Mathf.Deg2Rad), 0, Mathf.Cos(this.transform.eulerAngles.y * Mathf.Deg2Rad));           // Calculate axis depending on player's rotation value
             // LeftLookingDirection = new Vector3(-Mathf.Cos(this.transform.eulerAngles.y * Mathf.Deg2Rad), 0, Mathf.Sin(this.transform.eulerAngles.y * Mathf.Deg2Rad));
 
-            if(transform.rotation.x > -80)
-            {
+            //if(transform.rotation.x > -80)
+           // {
                 //     ForwardLookingDirection = new Vector3(0, Mathf.Cos(Xrotation * Mathf.Deg2Rad), Mathf.Sin(Xrotation * Mathf.Deg2Rad));           // Calculate axis depending on player's rotation value
                 //  LeftLookingDirection = new Vector3(0, -Mathf.Cos(Xrotation * Mathf.Deg2Rad), Mathf.Sin(Xrotation * Mathf.Deg2Rad));
                 //  MovingDirection = LeftLookingDirection * LForce + ForwardLookingDirection * FWDForce;
-
-
                 //PlayerPhysic.MoveRotation(PlayerPhysic.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X") * MouseSensitivity, 0)));
                 PlayerPhysic.MovePosition(transform.position + (transform.forward * FWDForce * 0.1f ) + (transform.right * -LForce * 0.1f));
-            }
+                PlayerPhysic.AddForce(-transform.up * 10);
+            PlayerPhysic.velocity = Vector3.zero;
+            PlayerPhysic.angularVelocity = Vector3.zero;
+            // print("1eme mur");
+            // print("transform rotation x: " + transform.rotation.x +" > -80 ????");
+
+            //  }
+            //else if(transform.rotation.x > -80 && transform.rotation.y > -80)
+            //{
+            //    PlayerPhysic.MovePosition(transform.position + (transform.forward * FWDForce * 0.1f) + (transform.up * -LForce * 0.1f));
+            //    PlayerPhysic.AddForce(-transform.right * 10);
+            //    print("2eme mur");
+
+            //}
+            //else if (transform.rotation.x > -80 && transform.rotation.y > 160)
+            //{
+            //    PlayerPhysic.MovePosition(transform.position + (-transform.forward * FWDForce * 0.1f) + (-transform.right * -LForce * 0.1f));
+            //    PlayerPhysic.AddForce(transform.up * 10);
+            //    print("3eme mur");
+            //}
         }
         else
         {
             ForwardLookingDirection = new Vector3(Mathf.Sin(Xrotation * Mathf.Deg2Rad), 0, Mathf.Cos(Xrotation * Mathf.Deg2Rad));           // Calculate axis depending on player's rotation value
             LeftLookingDirection = new Vector3(-Mathf.Cos(Xrotation * Mathf.Deg2Rad), 0, Mathf.Sin(Xrotation * Mathf.Deg2Rad));
-
             MovingDirection = LeftLookingDirection * LForce + ForwardLookingDirection * FWDForce;
         }
-
 
                 // Calculate moving direction
 

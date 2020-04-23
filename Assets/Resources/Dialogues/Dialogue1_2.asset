@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
+  m_Name: Dialogue1_2
+  m_EditorClassIdentifier: 
+  dialogue: "Andrew: Tu ne te souviens pas de moi ?... Je suis la pour t\u2019aider,
+    pour te sauver! Ils t\u2019ont.. enlev\xE9 pour faire des exp\xE9riences ! Alors
+    voil\xE0 ce que tu dois faire, d\u2019abord regarde autour de toi il doit y avoir
+    un post-it pour qu\u2019on puisse acc\xE9der au syst\xE8me de l\u2019ordinateur.
+    Il faut te lib\xE9rer AU PLUS VITE et arr\xEAter leurs atrocit\xE9s !"
+  nextDialogue: {fileID: 11400000, guid: c26c622f4a46e2445bb02e157e2c89e0, type: 2}
+  choixApres: 0
+  choix1: 
+  choix2: 
+  nextDialogueChoice1: {fileID: 0}
+  nextDialogueChoice2: {fileID: 0}
+  codeApres: 0
+  code: 
+  exitPc: 0
