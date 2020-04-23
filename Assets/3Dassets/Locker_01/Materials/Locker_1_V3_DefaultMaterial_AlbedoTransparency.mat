@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: lockertest_DefaultMaterial_AlbedoTransparency
+  m_Name: Locker_1_V3_DefaultMaterial_AlbedoTransparency
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 0712d600054349446a1d636aba3f1de9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 03562945916e7114e89af699e4c3966f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 04928b62dbaa87c42be1b0d797a0838e, type: 3}
+        m_Texture: {fileID: 2800000, guid: f3cb007601f9c154f8e5369f107e444c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 8eba9aaaf6dae0b489a88e39a99a1f9b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 947f4d9ba7d242a408554697f051bf8d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
