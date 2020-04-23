@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24327dad9de5cbf4089078b2d1bd6ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeBetweenLetters: 0.05
+  TimeBetweenLetters: 0.025
   TimeBeforeVanish: 1
   NextDialWithKey: 1
   keyToSkip: 323

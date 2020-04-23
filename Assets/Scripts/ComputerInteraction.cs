@@ -119,7 +119,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         {
             if (Input.GetKey(keyToSkip)) // KeyCode pour skip dialogue
             {
-                print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
+             //   print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
                 DisplayDialogue(textSO.nextDialogue.name);
                 //textSO = null;
                 nextDialBool = false;
@@ -159,13 +159,13 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
                             }else
                             {
                                 nextDialBool = true;
-                                print("En attente du skip..");
+                              //  print("En attente du skip..");
                                 PressToContinueText.maxVisibleCharacters = 100;
                             }
                         }
                         else
                         {
-                            print("On affiche le dialogue d'après: " + textSO.nextDialogue.name);
+                          //  print("On affiche le dialogue d'après: " + textSO.nextDialogue.name);
                             DisplayDialogue(textSO.nextDialogue.name);
                             //textSO = null;
                             ReferenceText.maxVisibleCharacters = 0;
@@ -215,7 +215,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         }
 
         string newText = textSO.dialogue;
-        print("On affiche le dialogue: " + nomDuDialogue);
+       // print("On affiche le dialogue: " + nomDuDialogue);
         ReferenceText.text = "";
         ReferenceText.maxVisibleCharacters = 0;
         ReferenceText.text = newText;
@@ -257,8 +257,8 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         if (textSO.codeApres && textSO.code == code && waitingForCode)
         {
 
-            print("Code trouver!");
-            print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
+            //print("Code trouver!");
+            //print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
             DisplayDialogue(textSO.nextDialogue.name);
             //textSO = null;
             nextDialBool = false;
