@@ -184,6 +184,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
+        if (GameManager.Instance.playerCarryingObject) return;
         if (isInComputer) return;
         GameManager.Instance.interactIcon.SetActive(false);
         // On entre dans le pc

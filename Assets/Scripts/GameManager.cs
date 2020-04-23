@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player, playerCam;
     public GameObject interactIcon;
     public bool canPlayerMove = true;
-    
+    public bool playerCarryingObject;
     
     
     private void Awake()

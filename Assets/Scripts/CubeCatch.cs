@@ -7,10 +7,19 @@ public class CubeCatch : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     public float MaxRange { get { return maxRange; } } // Range d'interact personnel à l'objet
     public float maxRange;
-    public Transform playerCam;
+    public Transform objectPos;
     bool beingCarried = false;
-
+    private GameManager gm;
     public Material highlightMat, defaultMat;
+    private BoxCollider BoxCollider;
+    private float timer;
+    bool reset;
+
+    public void Start()
+    {
+        BoxCollider = GetComponent<BoxCollider>();
+        gm = GameManager.Instance;
+    }
 
     // Les 3 fonctions IInteractable à implementer 
     public void OnStartHover()
@@ -23,14 +32,12 @@ public class CubeCatch : MonoBehaviour, IInteractable
         if (!beingCarried)
         {
             GetComponent<Rigidbody>().isKinematic = true;
-            transform.parent = playerCam;
-            beingCarried = true;
-        }
-        else if (beingCarried)
-        {
-            GetComponent<Rigidbody>().isKinematic = false;
-            transform.parent = null;
-            beingCarried = false;
+            transform.parent = objectPos;
+            transform.localPosition = Vector3.zero;
+            StartCoroutine("resetBeingCarried", true);
+            BoxCollider.enabled = false;
+            timer = 0;
+            reset = false;
         }
     }
 
@@ -38,7 +45,35 @@ public class CubeCatch : MonoBehaviour, IInteractable
     {
         GetComponent<Renderer>().material = defaultMat;
     }
-    
 
+    public void Update()
+    {
+        if (!reset)
+        {
+            timer += Time.deltaTime;
+            if(timer > 0.2f)
+            {
+                reset = true;
+            }
+        }
+        if (beingCarried && Input.GetKey(KeyCode.E) && reset)
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            transform.parent = null;
+            beingCarried = false;
+            BoxCollider.enabled = true;
+            StartCoroutine("resetBeingCarried", false);
+            
+            reset = false;
+        }
+    }
+
+    IEnumerator resetBeingCarried(bool state)
+    {
+
+        yield return new WaitForFixedUpdate();
+        beingCarried = state;
+        gm.playerCarryingObject = state;
+    }
 
 }

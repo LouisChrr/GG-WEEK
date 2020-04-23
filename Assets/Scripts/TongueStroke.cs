@@ -19,6 +19,7 @@ public class TongueStroke : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
+        if (GameManager.Instance.playerCarryingObject) return;
         animationTongue.Play();
         animationInteract.Play();
     }
