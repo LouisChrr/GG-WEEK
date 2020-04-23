@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
+  m_Name: Dialogue4_8
+  m_EditorClassIdentifier: 
+  dialogue: "Andrew : Un homme qui souhaite voir enfin l\u2019humanit\xE9 \xE9voluer..
+    allez d\xE9p\xEAche toi avant qu\u2019ils ne me d\xE9tectent"
+  nextDialogue: {fileID: 11400000, guid: 904afffa4e5998d4aaaab048fc550ba3, type: 2}
+  choixApres: 0
+  choix1: 
+  choix2: 
+  nextDialogueChoice1: {fileID: 0}
+  nextDialogueChoice2: {fileID: 0}
+  codeApres: 1
+  code: 1234
+  exitPc: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
+  m_Name: Dialogue1
+  m_EditorClassIdentifier: 
+  dialogue: "Andrew: Bonjour ! Je suis Andrew ! Tu te souviens de moi? Il faut se
+    d\xE9p\xEAcher, nous n'avons plus beaucoup de temps !"
+  nextDialogue: {fileID: 0}
+  choixApres: 1
+  choix1: Qui es-tu?
+  choix2: Je ne me souviens de rien...
+  nextDialogueChoice1: {fileID: 11400000, guid: e2f18a9d401fe6944a71f1fc6267f359,
+    type: 2}
+  nextDialogueChoice2: {fileID: 11400000, guid: e2f18a9d401fe6944a71f1fc6267f359,
+    type: 2}
+  codeApres: 0
+  code: 
+  exitPc: 0
