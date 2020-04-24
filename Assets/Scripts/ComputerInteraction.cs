@@ -89,6 +89,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
                 if (lerpValue > 1)
                 {
                     isInComputer = false;
+                    
                     GameManager.Instance.canPlayerMove = true;
                     playerCam.SetActive(true);
                     compCam.SetActive(false);
@@ -122,7 +123,16 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         {
             if (Input.GetKey(keyToSkip)) // KeyCode pour skip dialogue
             {
-             //   print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
+                //   print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
+                if (textSO.nextDialogue == null)
+                {
+                    // On quitte le pc
+                    Cursor.lockState = CursorLockMode.Locked;
+                    ComputerCanvas.SetActive(false);
+                    PressToContinueText.maxVisibleCharacters = 0;
+                    lerpValue = 0;
+                    exiting = true;
+                }
                 DisplayDialogue(textSO.nextDialogue.name);
                 //textSO = null;
                 nextDialBool = false;

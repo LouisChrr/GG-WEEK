@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue4_8
   m_EditorClassIdentifier: 
   dialogue: "Andrew : Un homme qui souhaite voir enfin l\u2019humanite evoluer..
-    allez depeche toi avant qu\u2019ils ne me d\xE9tectent"
+    allez depeche toi avant qu\u2019ils ne me detectent"
   nextDialogue: {fileID: 11400000, guid: 904afffa4e5998d4aaaab048fc550ba3, type: 2}
   choixApres: 0
   choix1: 

@@ -16,8 +16,8 @@ MonoBehaviour:
     pour l\u2019activer il nous faudrait le code d'acces !\r"
   nextDialogue: {fileID: 0}
   choixApres: 1
-  choix1: Activer? De quoi parles-tu Andrew?
-  choix2: "J\u2019ai trouv\xE9 un ascenseur, on pourrait peut-\xEAtre l\u2019utiliser?"
+  choix1: Activer? De quoi parles-tu?
+  choix2: "J\u2019ai trouve un ascenseur.."
   nextDialogueChoice1: {fileID: 11400000, guid: 4211cdf07fef72648b5afccd6a7a9d99,
     type: 2}
   nextDialogueChoice2: {fileID: 11400000, guid: 791b2adecd3e7a8459fb4ed348fce9be,

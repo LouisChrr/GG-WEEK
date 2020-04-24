@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue3_6
   m_EditorClassIdentifier: 
-  dialogue: "MEI : Bien-surrr,  attends je te l\u2019envoi (il faut que je trouve
-    un autre moyen de sortir)\r."
+  dialogue: 'MEI : Bien-surr, attends je te l''envoie (il faut que je trouve un autre
+    moyen de sortir)..'
   nextDialogue: {fileID: 0}
   choixApres: 0
   choix1: 

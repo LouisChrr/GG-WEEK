@@ -22,6 +22,7 @@ public class FinishElevator : MonoBehaviour, IInteractable
 
         if (Input.GetKeyDown(KeyCode.E) && isElevator && !codeInputField.isFocused)
         {
+            GameManager.Instance.canPlayerMove = true;
             CodeGO.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             waitingForCode = false;
@@ -43,6 +44,8 @@ public class FinishElevator : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
+        if (GameManager.Instance.playerCarryingObject) return;
+        GameManager.Instance.canPlayerMove = false;
         CodeGO.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         waitingForCode = true;
@@ -67,7 +70,7 @@ public class FinishElevator : MonoBehaviour, IInteractable
 
         if (textSO == code && waitingForCode)
         {
-
+            GameManager.Instance.canPlayerMove = true;
             codeInputField.text = "";
             CodeGO.SetActive(false);
             waitingForCode = false;

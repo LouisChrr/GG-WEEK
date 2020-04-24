@@ -27,7 +27,7 @@ public class CubeCatch : MonoBehaviour, IInteractable
     // Les 3 fonctions IInteractable à implementer 
     public void OnStartHover()
     {
-        if (!GameManager.Instance.playerCarryingObject)
+        if (!GameManager.Instance.playerCarryingObject && GameManager.Instance.canPlayerMove)
         {
             GameManager.Instance.interactIcon.SetActive(true);
 
@@ -37,7 +37,7 @@ public class CubeCatch : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        if (!beingCarried && reset)
+        if (!beingCarried && reset && GameManager.Instance.canPlayerMove)
         {
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = objectPos;

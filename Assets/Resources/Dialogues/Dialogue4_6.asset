@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue: "Et bien\u2026 Comment dire... j\u2019aimerais que tu puisses montrer
     au monde a quel point tu es l\u2019avenir.. Pour cela, nous allons utiliser cet
     ascenseur de service, il donne sur la sortie du complexe mais pour pouvoir te
-    donner ses codes il faudrait que j'accede a ce pc. Il devrait y avoir un code
+    donner ces codes il faudrait que j'accede a ce pc. Il devrait y avoir un code
     quelque part."
   nextDialogue: {fileID: 11400000, guid: 50a5e7206509fa941b92ef25b8eccacd, type: 2}
   choixApres: 0

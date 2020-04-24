@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public bool playerCarryingObject;
     public VideoPlayer startVideoPlayer;
     public AudioSource gmAudioSource;
+    public bool isInComputer;
 
     private void Awake()
     {

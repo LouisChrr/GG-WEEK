@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue3_5
   m_EditorClassIdentifier: 
-  dialogue: "Andrew : Par la chemin\xE9e mon cher MEI, il te suffit d\u2019entrer
-    dans le crematorium. Allez donne moi le code que je puisse t\u2019ouvrir l'acces."
+  dialogue: "Andrew : Par la cheminee mon cher MEI, il te suffit d\u2019entrer dans
+    le crematorium. Allez donne moi le code que je puisse t\u2019ouvrir l'acces."
   nextDialogue: {fileID: 11400000, guid: 3908b4c00e2d2ad4d8c60a5b6fc6db92, type: 2}
   choixApres: 0
   choix1: 
