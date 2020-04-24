@@ -4,16 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ElevateurTeleport : MonoBehaviour, IInteractable
+public class FinishElevator : MonoBehaviour, IInteractable
 {
     public TMP_InputField codeInputField;
 
     public float MaxRange { get { return maxRange; } } // Range d'interact personnel à l'objet
     public float maxRange;
-    public GameObject Player;
-    public Transform Teleport;
     public bool waitingForCode;
-    private float timer = 0f;
     public GameObject CodeGO;
     public string textSO;
     public Material highlightMat, defaultMat;
@@ -22,9 +19,9 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
     // Les 3 fonctions IInteractable à implementer 
     private void Update()
     {
-       
 
-        if (Input.GetKeyDown(KeyCode.E) &&  isElevator)
+
+        if (Input.GetKeyDown(KeyCode.E) && isElevator)
         {
             CodeGO.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
@@ -36,8 +33,8 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
         {
             return;
         }
-        
-        
+
+
     }
 
     public void OnStartHover()
@@ -62,7 +59,7 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
     {
         isElevator = !isElevator;
     }
- 
+
 
     public void checkCode()
     {
@@ -71,12 +68,12 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
 
         if (textSO == code && waitingForCode)
         {
-            
+
             codeInputField.text = "";
             CodeGO.SetActive(false);
             waitingForCode = false;
             Cursor.lockState = CursorLockMode.Locked;
-            Player.transform.position = Teleport.position;
+            GameManager.Instance.launchEndVideo();
         }
 
     }
