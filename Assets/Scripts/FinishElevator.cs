@@ -13,7 +13,6 @@ public class FinishElevator : MonoBehaviour, IInteractable
     public bool waitingForCode;
     public GameObject CodeGO;
     public string textSO;
-    public Material highlightMat, defaultMat;
     private bool isElevator;
 
     // Les 3 fonctions IInteractable à implementer 
@@ -39,7 +38,7 @@ public class FinishElevator : MonoBehaviour, IInteractable
 
     public void OnStartHover()
     {
-        GetComponent<Renderer>().material = highlightMat;
+        GameManager.Instance.interactIcon.SetActive(true);
     }
 
     public void OnInteract()
@@ -52,7 +51,7 @@ public class FinishElevator : MonoBehaviour, IInteractable
 
     public void OnEndHover()
     {
-        GetComponent<Renderer>().material = defaultMat;
+        GameManager.Instance.interactIcon.SetActive(false);
     }
 
     public void isOK()

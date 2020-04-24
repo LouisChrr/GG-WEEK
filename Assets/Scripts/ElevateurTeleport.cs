@@ -16,7 +16,6 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
     private float timer = 0f;
     public GameObject CodeGO;
     public string textSO;
-    public Material highlightMat, defaultMat;
     private bool isElevator;
 
     // Les 3 fonctions IInteractable à implementer 
@@ -42,7 +41,7 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
 
     public void OnStartHover()
     {
-        GetComponent<Renderer>().material = highlightMat;
+        GameManager.Instance.interactIcon.SetActive(true);
     }
 
     public void OnInteract()
@@ -55,7 +54,7 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
 
     public void OnEndHover()
     {
-        GetComponent<Renderer>().material = defaultMat;
+        GameManager.Instance.interactIcon.SetActive(false);
     }
 
     public void isOK()
