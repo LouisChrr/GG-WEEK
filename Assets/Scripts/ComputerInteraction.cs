@@ -38,6 +38,8 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
     private Quaternion cameraRot;
     private float lerpValue;
     bool entering, exiting;
+    public AudioSource computerAudioSource;
+    public AudioClip dialSound;
 
     private void Start()
     {
@@ -243,6 +245,8 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         {
             timer = 0;
             ReferenceText.maxVisibleCharacters += 1;
+            computerAudioSource.pitch = Random.Range(-1.0f, 1.0f);
+            computerAudioSource.PlayOneShot(dialSound);
             if (ReferenceText.maxVisibleCharacters >= charCount)
             {
                     textBeingWrited = false;

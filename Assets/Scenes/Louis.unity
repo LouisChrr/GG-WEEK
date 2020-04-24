@@ -1950,6 +1950,8 @@ MonoBehaviour:
   isInComputer: 0
   playerCam: {fileID: 963194225}
   compCam: {fileID: 1301499816}
+  computerAudioSource: {fileID: 0}
+  dialSound: {fileID: 0}
 --- !u!65 &1198612666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2570,6 +2572,7 @@ MonoBehaviour:
   playerCam: {fileID: 963194225}
   interactIcon: {fileID: 611802388}
   canPlayerMove: 1
+  playerCarryingObject: 0
 --- !u!4 &1313369429
 Transform:
   m_ObjectHideFlags: 0
