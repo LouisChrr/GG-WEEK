@@ -101,6 +101,7 @@ public class ComputerInteraction2 : MonoBehaviour, IInteractable
                 // On quitte le pc
                 Cursor.lockState = CursorLockMode.Locked;
                 ComputerCanvas.SetActive(false);
+                PressToContinueText.maxVisibleCharacters = 0;
                 lerpValue = 0;
                 exiting = true;
             }

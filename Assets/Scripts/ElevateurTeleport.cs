@@ -23,7 +23,7 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
     {
        
 
-        if (Input.GetKeyDown(KeyCode.E) &&  isElevator)
+        if (Input.GetKeyDown(KeyCode.E) &&  isElevator && !codeInputField.isFocused)
         {
             CodeGO.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;

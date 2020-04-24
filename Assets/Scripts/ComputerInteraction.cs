@@ -99,6 +99,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
             if (Input.GetKeyDown(KeyCode.E) && !exiting)
             {
                 // On quitte le pc
+                PressToContinueText.maxVisibleCharacters = 0;
                 Cursor.lockState = CursorLockMode.Locked;
                 ComputerCanvas.SetActive(false);
                 lerpValue = 0;
