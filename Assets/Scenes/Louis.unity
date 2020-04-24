@@ -2573,6 +2573,8 @@ MonoBehaviour:
   interactIcon: {fileID: 611802388}
   canPlayerMove: 1
   playerCarryingObject: 0
+  startVideoPlayer: {fileID: 0}
+  gmAudioSource: {fileID: 0}
 --- !u!4 &1313369429
 Transform:
   m_ObjectHideFlags: 0
@@ -3825,6 +3827,8 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 512
+  playerAudioSource: {fileID: 0}
+  playerWalkingClip: {fileID: 0}
   InitialFOV: 80
   RunningFOV: 90
   Xsensitivity: 1.5

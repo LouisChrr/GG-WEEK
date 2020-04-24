@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void launchEndVideo()
     {
+        Player.transform.position = new Vector3(1000, 1000, 1000);
         startVideoPlayer.enabled = true;
         canPlayerMove = false;
         gmAudioSource.Stop();
