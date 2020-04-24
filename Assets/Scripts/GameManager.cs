@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
+        Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

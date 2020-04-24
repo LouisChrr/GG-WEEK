@@ -21,7 +21,6 @@ public class ElevateurTeleport : MonoBehaviour, IInteractable
     // Les 3 fonctions IInteractable à implementer 
     private void Update()
     {
-       
 
         if (Input.GetKeyDown(KeyCode.E) &&  isElevator && !codeInputField.isFocused)
         {
