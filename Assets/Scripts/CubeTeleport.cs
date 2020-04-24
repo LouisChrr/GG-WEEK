@@ -8,6 +8,7 @@ public class CubeTeleport : MonoBehaviour, IInteractable
     public float maxRange;
     public GameObject Player;
     public Transform Teleport;
+    
 
     public Material highlightMat, defaultMat;
 
@@ -19,7 +20,7 @@ public class CubeTeleport : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        
+        GetComponent<AudioSource>().Play();
         Player.transform.position = Teleport.position;
         Debug.Log("Interagi");
     }
