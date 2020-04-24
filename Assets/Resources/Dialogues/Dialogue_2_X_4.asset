@@ -19,6 +19,6 @@ MonoBehaviour:
   choix2: 
   nextDialogueChoice1: {fileID: 0}
   nextDialogueChoice2: {fileID: 0}
-  codeApres: 1
-  code: CleanM235
+  codeApres: 0
+  code: 
   exitPc: 0
