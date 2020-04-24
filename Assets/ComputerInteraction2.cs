@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ComputerInteraction : MonoBehaviour, IInteractable
+public class ComputerInteraction2 : MonoBehaviour, IInteractable
 {
     // Start is called before the first frame update
 
@@ -31,7 +31,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
     private bool nextDialBool;
     public DialogueScriptableObject textSO;
     public DialogueScriptableObject[] dialoguesSO;
-    
+
     [SerializeField] bool isInComputer;
     public GameObject playerCam, compCam;
     private Vector3 cameraPos;
@@ -52,7 +52,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         foreach (DialogueScriptableObject SO in Resources.LoadAll<DialogueScriptableObject>("Dialogues/")) list.Add(SO);
         dialoguesSO = list.ToArray();
         ReferenceText.maxVisibleCharacters = 0;
-        DisplayDialogue("Dialogue0");
+        DisplayDialogue("Dialogue4_1");
         PressToContinueText.maxVisibleCharacters = 0;
     }
 
@@ -121,7 +121,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         {
             if (Input.GetKey(keyToSkip)) // KeyCode pour skip dialogue
             {
-             //   print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
+                //   print("On affiche le dialogue d'après (skip): " + textSO.nextDialogue.name);
                 DisplayDialogue(textSO.nextDialogue.name);
                 //textSO = null;
                 nextDialBool = false;
@@ -140,7 +140,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
                     {
                         textSO = null;
                         Debug.LogError("textSO is NULL ????");
-                        ReferenceText.maxVisibleCharacters = 0; 
+                        ReferenceText.maxVisibleCharacters = 0;
                         return;
                     }
                     else
@@ -158,16 +158,17 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
                                 Choix2Text.text = textSO.choix2;
                                 waitingForChoice = true;
                                 ChoixGO.SetActive(true);
-                            }else
+                            }
+                            else
                             {
                                 nextDialBool = true;
-                              //  print("En attente du skip..");
+                                //  print("En attente du skip..");
                                 PressToContinueText.maxVisibleCharacters = 100;
                             }
                         }
                         else
                         {
-                          //  print("On affiche le dialogue d'après: " + textSO.nextDialogue.name);
+                            //  print("On affiche le dialogue d'après: " + textSO.nextDialogue.name);
                             DisplayDialogue(textSO.nextDialogue.name);
                             //textSO = null;
                             ReferenceText.maxVisibleCharacters = 0;
@@ -177,7 +178,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
             }
         }
     }
-   
+
     public void OnStartHover()
     {
         if (isInComputer) return;
@@ -192,7 +193,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         // On entre dans le pc
         GameManager.Instance.canPlayerMove = false;
         isInComputer = true;
-        
+
         lerpValue = 0;
         entering = true;
         compCam.transform.position = playerCam.transform.position;
@@ -218,7 +219,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         }
 
         string newText = textSO.dialogue;
-       // print("On affiche le dialogue: " + nomDuDialogue);
+        // print("On affiche le dialogue: " + nomDuDialogue);
         ReferenceText.text = "";
         ReferenceText.maxVisibleCharacters = 0;
         ReferenceText.text = newText;
@@ -241,7 +242,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
     void TypeWriteText()
     {
         timer += Time.deltaTime;
-           if (timer >= TimeBetweenLetters)
+        if (timer >= TimeBetweenLetters)
         {
             timer = 0;
             ReferenceText.maxVisibleCharacters += 1;
@@ -249,8 +250,8 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
             computerAudioSource.PlayOneShot(dialSound);
             if (ReferenceText.maxVisibleCharacters >= charCount)
             {
-                    textBeingWrited = false;
-                    timer = 0;
+                textBeingWrited = false;
+                timer = 0;
             }
         }
     }
@@ -271,7 +272,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
             CodeGO.SetActive(false);
             waitingForCode = false;
         }
-        
+
     }
 
     public void Choice1()
@@ -282,7 +283,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
             ChoixGO.SetActive(false);
             waitingForChoice = false;
         }
-        
+
     }
 
     public void Choice2()

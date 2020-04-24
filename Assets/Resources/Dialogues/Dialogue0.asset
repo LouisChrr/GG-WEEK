@@ -20,5 +20,5 @@ MonoBehaviour:
   nextDialogueChoice1: {fileID: 0}
   nextDialogueChoice2: {fileID: 0}
   codeApres: 1
-  code: 1234
+  code: 958
   exitPc: 0

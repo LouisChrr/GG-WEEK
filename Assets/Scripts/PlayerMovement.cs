@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject CameraObject;
     public GameObject InitialCamera;
     public LayerMask wallMask = -1;
-
+    public AudioSource playerAudioSource;
+    public AudioClip playerWalkingClip;
     [Space(10)]
 
 
@@ -342,7 +343,7 @@ public class PlayerMovement : MonoBehaviour
         if (DistanceWalked.magnitude > 1.8f && !isInAir)
         {
             PreviousPos = transform.position;
-
+            playerAudioSource.PlayOneShot(playerWalkingClip);
         }
 
     }

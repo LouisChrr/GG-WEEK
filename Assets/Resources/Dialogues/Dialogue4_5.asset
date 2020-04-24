@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue4_5
   m_EditorClassIdentifier: 
-  dialogue: "Andrew : oui toi, un \xEAtre sup\xE9rieur aux autres humains, tu es
-    une r\xE9volution MEI. Pour tout le monde\r."
+  dialogue: "Andrew : oui toi, un etre superieur aux autres humains, tu es une revolution
+    MEI. Pour tout le monde\r."
   nextDialogue: {fileID: 0}
   choixApres: 1
   choix1: Pardon?

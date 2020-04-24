@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue3_2
   m_EditorClassIdentifier: 
-  dialogue: "MEI : Attends tu m\u2019as pas dis \xE0 quoi ce code servira !\r"
+  dialogue: "MEI : Attends tu m\u2019as pas dis a quoi ce code servira !\r"
   nextDialogue: {fileID: 11400000, guid: 65c54bdad3cd00c49abef4ed7e637cb3, type: 2}
   choixApres: 0
   choix1: 
@@ -21,3 +21,4 @@ MonoBehaviour:
   nextDialogueChoice2: {fileID: 0}
   codeApres: 0
   code: 
+  exitPc: 0

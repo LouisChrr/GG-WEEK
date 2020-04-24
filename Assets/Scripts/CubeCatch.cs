@@ -14,22 +14,26 @@ public class CubeCatch : MonoBehaviour, IInteractable
     private BoxCollider BoxCollider;
     private float timer;
     bool reset;
+    private AudioSource cubeAudioSource;
+    public AudioClip dropSound;
 
     public void Start()
     {
         BoxCollider = GetComponent<BoxCollider>();
         gm = GameManager.Instance;
+        cubeAudioSource = GetComponent<AudioSource>();
     }
 
     // Les 3 fonctions IInteractable à implementer 
     public void OnStartHover()
     {
-        GetComponent<Renderer>().material = highlightMat;
+        //GetComponent<Renderer>().material = highlightMat;
+        GameManager.Instance.interactIcon.SetActive(true);
     }
 
     public void OnInteract()
     {
-        if (!beingCarried)
+        if (!beingCarried && reset)
         {
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = objectPos;
@@ -43,7 +47,9 @@ public class CubeCatch : MonoBehaviour, IInteractable
 
     public void OnEndHover()
     {
-        GetComponent<Renderer>().material = defaultMat;
+        //GetComponent<Renderer>().material = defaultMat;
+        GameManager.Instance.interactIcon.SetActive(false);
+
     }
 
     public void Update()
@@ -63,7 +69,7 @@ public class CubeCatch : MonoBehaviour, IInteractable
             beingCarried = false;
             BoxCollider.enabled = true;
             StartCoroutine("resetBeingCarried", false);
-            
+            cubeAudioSource.PlayOneShot(dropSound);
             reset = false;
         }
     }

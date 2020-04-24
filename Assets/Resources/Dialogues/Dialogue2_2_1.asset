@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue2_2_1
   m_EditorClassIdentifier: 
-  dialogue: "Andrew :  NON ! Concentres toi sur le code ! Il faut qu\u2019on te lib\xE8re
+  dialogue: "Andrew :  NON ! Concentres toi sur le code ! Il faut qu\u2019on te libere
     au plus vite et qu\u2019on ruine leur plans!"
   nextDialogue: {fileID: 11400000, guid: 3fb8fb573addea7459f19cca98241651, type: 2}
   choixApres: 0

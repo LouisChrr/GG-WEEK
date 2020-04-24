@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue1
   m_EditorClassIdentifier: 
-  dialogue: "Andrew: Bonjour ! Je suis Andrew ! Tu te souviens de moi? Il faut se
-    d\xE9p\xEAcher, nous n'avons plus beaucoup de temps !"
+  dialogue: 'Andrew: Bonjour ! Je suis Andrew ! Tu te souviens de moi? Il faut se
+    depecher, nous n''avons plus beaucoup de temps !'
   nextDialogue: {fileID: 0}
   choixApres: 1
   choix1: Qui es-tu?

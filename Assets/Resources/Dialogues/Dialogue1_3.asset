@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue1_3
   m_EditorClassIdentifier: 
-  dialogue: "MEi : Tr\xE8s bien\u2026 je vais essayer de le trouver.\r"
+  dialogue: "MEi : Tres bien\u2026 je vais essayer de le trouver.\r"
   nextDialogue: {fileID: 11400000, guid: c5c250c6e0e18c14a89c4e7965b1aff0, type: 2}
   choixApres: 0
   choix1: 

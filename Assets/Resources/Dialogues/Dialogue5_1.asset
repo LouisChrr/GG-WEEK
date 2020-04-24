@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue5_1
   m_EditorClassIdentifier: 
-  dialogue: "Andrew : Bien..voyons voir\u2026 Mmmh c\u2019est script\xE9, le code
-    est : CREA ! \r"
+  dialogue: "Andrew : Bien..voyons voir\u2026 Mmmh c\u2019est scripte, le code est
+    : CREA ! \r"
   nextDialogue: {fileID: 11400000, guid: 5dcc5593e6bfbec4e83e48d0bf5dce96, type: 2}
   choixApres: 0
   choix1: 

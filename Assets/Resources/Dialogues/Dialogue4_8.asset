@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue4_8
   m_EditorClassIdentifier: 
-  dialogue: "Andrew : Un homme qui souhaite voir enfin l\u2019humanit\xE9 \xE9voluer..
-    allez d\xE9p\xEAche toi avant qu\u2019ils ne me d\xE9tectent"
+  dialogue: "Andrew : Un homme qui souhaite voir enfin l\u2019humanite evoluer..
+    allez depeche toi avant qu\u2019ils ne me d\xE9tectent"
   nextDialogue: {fileID: 11400000, guid: 904afffa4e5998d4aaaab048fc550ba3, type: 2}
   choixApres: 0
   choix1: 

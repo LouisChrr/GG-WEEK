@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue4_3
   m_EditorClassIdentifier: 
-  dialogue: "Andrew : Nous ne nous sommes jamais rencontr\xE9s.. et je t\u2019admire."
+  dialogue: "Andrew : Nous ne nous sommes jamais rencontres.. et je t\u2019admire."
   nextDialogue: {fileID: 11400000, guid: 997ced5765affda4abf3c53d4087b511, type: 2}
   choixApres: 0
   choix1: 

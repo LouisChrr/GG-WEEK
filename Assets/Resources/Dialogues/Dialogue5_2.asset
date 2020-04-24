@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue5_2
   m_EditorClassIdentifier: 
-  dialogue: "MEI : Tr\xE8s bien, je vais essayer de voir ce que je peux faire avec
-    \xE7a\r... (il faut que je trouve une correspondance avec ce fameux CREA)\r"
+  dialogue: "MEI : Tres bien, je vais essayer de voir ce que je peux faire avec \xE7a\r...
+    (il faut que je trouve une correspondance avec ce fameux CREA)\r"
   nextDialogue: {fileID: 0}
   choixApres: 0
   choix1: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue2
   m_EditorClassIdentifier: 
   dialogue: "Andrew : Parfait ! Parfait ! Maintenant j..nous sommes dedans ! Bien,
-    pour l\u2019activer il nous faudrait le code d'acc\xE8s !\r"
+    pour l\u2019activer il nous faudrait le code d'acces !\r"
   nextDialogue: {fileID: 0}
   choixApres: 1
   choix1: Activer? De quoi parles-tu Andrew?

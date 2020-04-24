@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Dialogue1_2
   m_EditorClassIdentifier: 
   dialogue: "Andrew: Tu ne te souviens pas de moi ?... Je suis la pour t\u2019aider,
-    pour te sauver! Ils t\u2019ont.. enlev\xE9 pour faire des exp\xE9riences ! Alors
-    voil\xE0 ce que tu dois faire, d\u2019abord regarde autour de toi il doit y avoir
-    un post-it pour qu\u2019on puisse acc\xE9der au syst\xE8me de l\u2019ordinateur.
-    Il faut te lib\xE9rer AU PLUS VITE et arr\xEAter leurs atrocit\xE9s !"
+    pour te sauver! Ils t\u2019ont.. enleve pour faire des experiences ! Alors voila
+    ce que tu dois faire, d\u2019abord regarde autour de toi il doit y avoir un post-it
+    pour qu\u2019on puisse acceder au systeme de l\u2019ordinateur. Il faut te liberer
+    AU PLUS VITE et arr\xEAter leurs atrocites !"
   nextDialogue: {fileID: 11400000, guid: c26c622f4a46e2445bb02e157e2c89e0, type: 2}
   choixApres: 0
   choix1: 

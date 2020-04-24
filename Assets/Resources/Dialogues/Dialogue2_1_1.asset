@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3474ff3eb591e94cb813f782fd398d6, type: 3}
   m_Name: Dialogue2_1_1
   m_EditorClassIdentifier: 
-  dialogue: "Andrew : Du moyen de te lib\xE9rer pardi ! Tu seras enfin lib\xE9r\xE9
-    !\r"
+  dialogue: "Andrew : Du moyen de te liberer pardi ! Tu seras enfin libere !\r"
   nextDialogue: {fileID: 11400000, guid: a7f9af2fe5a17f14e817fedac7aaa315, type: 2}
   choixApres: 0
   choix1: 
