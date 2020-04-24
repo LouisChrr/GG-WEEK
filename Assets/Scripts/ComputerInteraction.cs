@@ -245,7 +245,7 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
         {
             timer = 0;
             ReferenceText.maxVisibleCharacters += 1;
-            computerAudioSource.pitch = Random.Range(-0.5f, 0.5f);
+            computerAudioSource.pitch = Random.Range(-0.3f, 0.3f);
             computerAudioSource.PlayOneShot(dialSound);
             if (ReferenceText.maxVisibleCharacters >= charCount)
             {

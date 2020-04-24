@@ -16,7 +16,7 @@ MonoBehaviour:
     pour te sauver! Ils t\u2019ont.. enleve pour faire des experiences ! Alors voila
     ce que tu dois faire, d\u2019abord regarde autour de toi il doit y avoir un post-it
     pour qu\u2019on puisse acceder au systeme de l\u2019ordinateur. Il faut te liberer
-    AU PLUS VITE et arr\xEAter leurs atrocites !"
+    AU PLUS VITE et arreter leurs atrocites !"
   nextDialogue: {fileID: 11400000, guid: c26c622f4a46e2445bb02e157e2c89e0, type: 2}
   choixApres: 0
   choix1: 

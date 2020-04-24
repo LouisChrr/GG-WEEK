@@ -27,8 +27,12 @@ public class CubeCatch : MonoBehaviour, IInteractable
     // Les 3 fonctions IInteractable à implementer 
     public void OnStartHover()
     {
+        if (!GameManager.Instance.playerCarryingObject)
+        {
+            GameManager.Instance.interactIcon.SetActive(true);
+
+        }
         //GetComponent<Renderer>().material = highlightMat;
-        GameManager.Instance.interactIcon.SetActive(true);
     }
 
     public void OnInteract()

@@ -246,7 +246,7 @@ public class ComputerInteraction2 : MonoBehaviour, IInteractable
         {
             timer = 0;
             ReferenceText.maxVisibleCharacters += 1;
-            computerAudioSource.pitch = Random.Range(-0.5f, 0.5f);
+            computerAudioSource.pitch = Random.Range(-0.3f, 0.3f);
             computerAudioSource.PlayOneShot(dialSound);
             if (ReferenceText.maxVisibleCharacters >= charCount)
             {
@@ -258,7 +258,6 @@ public class ComputerInteraction2 : MonoBehaviour, IInteractable
 
     public void checkCode()
     {
-
         string code = codeInputField.text;
         if (textSO.codeApres && textSO.code == code && waitingForCode)
         {

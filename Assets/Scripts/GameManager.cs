@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +12,9 @@ public class GameManager : MonoBehaviour
     public GameObject interactIcon;
     public bool canPlayerMove = true;
     public bool playerCarryingObject;
-    
-    
+    public VideoPlayer startVideoPlayer;
+    public AudioSource gmAudioSource;
+
     private void Awake()
     {
         if (Instance != null)
@@ -19,6 +22,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("2 GameManager?");
         }
         Instance = this;
+        
     }
 
     public void ShakeCam(float duration)
@@ -29,12 +33,20 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        startVideoPlayer.loopPointReached += CheckOver;
+        //gmAudioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void launchEndVideo()
     {
-        
+        startVideoPlayer.enabled = true;
+        canPlayerMove = false;
+        gmAudioSource.Stop();
     }
+
+    void CheckOver(UnityEngine.Video.VideoPlayer vp)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
 }
